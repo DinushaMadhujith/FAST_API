@@ -1,0 +1,14 @@
+# Exported from Render on 2024-09-10T19:16:10Z
+services:
+- type: web
+  name: FAST_API
+  runtime: python
+  repo: https://github.com/DinushaMadhujith/FAST_API
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+version: "1"
