@@ -29,7 +29,22 @@ class HouseFeatures(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {'message': "House Price Prediction API"}
+    return {'message': "House Price Prediction API
+
+  Example POST Request:          
+  "area": 3500,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "stories": 2,
+  "mainroad": 1,
+  "guestroom": 0,
+  "basement": 1,
+  "hotwaterheating": 0,
+  "airconditioning": 1,
+  "parking": 2,
+  "prefarea": 1,
+  "furnishingstatus": 1
+            "}
 
 # Define the prediction endpoint
 @app.post("/predict/")
